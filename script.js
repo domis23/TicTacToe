@@ -113,15 +113,15 @@ const reset = () => {
   location.reload()
 }
 const resetPol = () => {
-  btns[0].innerText = ''
-  btns[1].innerText = ''
-  btns[2].innerText = ''
-  btns[3].innerText = ''
-  btns[4].innerText = ''
-  btns[5].innerText = ''
-  btns[6].innerText = ''
-  btns[7].innerText = ''
-  btns[8].innerText = ''
+  xroH[0].innerText = ''
+  xroH[1].innerText = ''
+  xroH[2].innerText = ''
+  xroH[3].innerText = ''
+  xroH[4].innerText = ''
+  xroH[5].innerText = ''
+  xroH[6].innerText = ''
+  xroH[7].innerText = ''
+  xroH[8].innerText = ''
 }
 const winO = () => {
   alert('O wygrały 🥳')
@@ -130,51 +130,51 @@ const winO = () => {
 }
 const wygranaO = () => {
   if (
-    btns[0].innerText == 'O' &&
-    btns[1].innerText == 'O' &&
-    btns[2].innerText == 'O'
+    xroH[0].innerText == 'O' &&
+    xroH[1].innerText == 'O' &&
+    xroH[2].innerText == 'O'
   ) {
     winO()
   } else if (
-    btns[3].innerText == 'O' &&
-    btns[4].innerText == 'O' &&
-    btns[5].innerText == 'O'
+    xroH[3].innerText == 'O' &&
+    xroH[4].innerText == 'O' &&
+    xroH[5].innerText == 'O'
   ) {
     winO()
   } else if (
-    btns[6].innerText == 'O' &&
-    btns[7].innerText == 'O' &&
-    btns[8].innerText == 'O'
+    xroH[6].innerText == 'O' &&
+    xroH[7].innerText == 'O' &&
+    xroH[8].innerText == 'O'
   ) {
     winO()
   } else if (
-    btns[0].innerText == 'O' &&
-    btns[3].innerText == 'O' &&
-    btns[6].innerText == 'O'
+    xroH[0].innerText == 'O' &&
+    xroH[3].innerText == 'O' &&
+    xroH[6].innerText == 'O'
   ) {
     winO()
   } else if (
-    btns[1].innerText == 'O' &&
-    btns[4].innerText == 'O' &&
-    btns[7].innerText == 'O'
+    xroH[1].innerText == 'O' &&
+    xroH[4].innerText == 'O' &&
+    xroH[7].innerText == 'O'
   ) {
     winO()
   } else if (
-    btns[2].innerText == 'O' &&
-    btns[5].innerText == 'O' &&
-    btns[8].innerText == 'O'
+    xroH[2].innerText == 'O' &&
+    xroH[5].innerText == 'O' &&
+    xroH[8].innerText == 'O'
   ) {
     winO()
   } else if (
-    btns[0].innerText == 'O' &&
-    btns[4].innerText == 'O' &&
-    btns[8].innerText == 'O'
+    xroH[0].innerText == 'O' &&
+    xroH[4].innerText == 'O' &&
+    xroH[8].innerText == 'O'
   ) {
     winO()
   } else if (
-    btns[2].innerText == 'O' &&
-    btns[4].innerText == 'O' &&
-    btns[6].innerText == 'O'
+    xroH[2].innerText == 'O' &&
+    xroH[4].innerText == 'O' &&
+    xroH[6].innerText == 'O'
   ) {
     winO()
   }
@@ -187,51 +187,51 @@ const winX = () => {
 }
 const wygranaX = () => {
   if (
-    btns[0].innerText == 'X' &&
-    btns[1].innerText == 'X' &&
-    btns[2].innerText == 'X'
+    xroH[0].innerText == 'X' &&
+    xroH[1].innerText == 'X' &&
+    xroH[2].innerText == 'X'
   ) {
     winX()
   } else if (
-    btns[3].innerText == 'X' &&
-    btns[4].innerText == 'X' &&
-    btns[5].innerText == 'X'
+    xroH[3].innerText == 'X' &&
+    xroH[4].innerText == 'X' &&
+    xroH[5].innerText == 'X'
   ) {
     winX()
   } else if (
-    btns[6].innerText == 'X' &&
-    btns[7].innerText == 'X' &&
-    btns[8].innerText == 'X'
+    xroH[6].innerText == 'X' &&
+    xroH[7].innerText == 'X' &&
+    xroH[8].innerText == 'X'
   ) {
     winX()
   } else if (
-    btns[0].innerText == 'X' &&
-    btns[3].innerText == 'X' &&
-    btns[6].innerText == 'X'
+    xroH[0].innerText == 'X' &&
+    xroH[3].innerText == 'X' &&
+    xroH[6].innerText == 'X'
   ) {
     winX()
   } else if (
-    btns[1].innerText == 'X' &&
-    btns[4].innerText == 'X' &&
-    btns[7].innerText == 'X'
+    xroH[1].innerText == 'X' &&
+    xroH[4].innerText == 'X' &&
+    xroH[7].innerText == 'X'
   ) {
     winX()
   } else if (
-    btns[2].innerText == 'X' &&
-    btns[5].innerText == 'X' &&
-    btns[8].innerText == 'X'
+    xroH[2].innerText == 'X' &&
+    xroH[5].innerText == 'X' &&
+    xroH[8].innerText == 'X'
   ) {
     winX()
   } else if (
-    btns[0].innerText == 'X' &&
-    btns[4].innerText == 'X' &&
-    btns[8].innerText == 'X'
+    xroH[0].innerText == 'X' &&
+    xroH[4].innerText == 'X' &&
+    xroH[8].innerText == 'X'
   ) {
     winX()
   } else if (
-    btns[2].innerText == 'X' &&
-    btns[4].innerText == 'X' &&
-    btns[6].innerText == 'X'
+    xroH[2].innerText == 'X' &&
+    xroH[4].innerText == 'X' &&
+    xroH[6].innerText == 'X'
   ) {
     winX()
   }
