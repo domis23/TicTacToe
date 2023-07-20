@@ -1,3 +1,6 @@
+body{
+background-color: black;
+}
 .gora {
   width: 33%;
   display: flex;
