@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TicTacToe</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="initial-scale=1" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <link rel="apple-touch-icon" sizes="192x192" href="icon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -42,7 +47,9 @@
       </div>
     </div>
     <center>
-      <button id="Reset">Reset</button>
+      <button id="Reset" class="button">
+        <p style="color: white; font-size: 1.5em">RESET</p>
+      </button>
       <div id="akt">
         <p id="gra" style="font-size: 2em; color: white"></p>
       </div>
