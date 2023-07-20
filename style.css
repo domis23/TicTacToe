@@ -1,0 +1,31 @@
+.gora {
+  width: 33%;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
+.srodek {
+  width: 33%;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
+
+.dol {
+  width: 33%;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
+.button {
+  width: 100%;
+  height: 10em;
+  justify-content: center;
+}
+#Reset {
+  width: 16em;
+  height: 6em;
+}
+.xro {
+  font-size: 2em;
+}
