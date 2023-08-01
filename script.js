@@ -2,6 +2,7 @@ let btns = document.querySelectorAll('button')
 let kolejkaH = document.querySelector('#gra')
 let xroH = document.querySelectorAll('.xro')
 let starts = Math.floor(Math.random() * 10 + 2)
+let ruchy = 0
 let kolejka
 console.log(starts)
 if (starts % 2 == 0) {
@@ -27,6 +28,7 @@ const f1 = () => {
     kolejka = 1
   }
   btns[0].disabled = true
+  ruchy++
 }
 const f2 = () => {
   if (kolejka == 1) {
@@ -37,6 +39,7 @@ const f2 = () => {
     kolejka = 1
   }
   btns[1].disabled = true
+  ruchy++
 }
 const f3 = () => {
   if (kolejka == 1) {
@@ -47,6 +50,7 @@ const f3 = () => {
     kolejka = 1
   }
   btns[2].disabled = true
+  ruchy++
 }
 const f4 = () => {
   if (kolejka == 1) {
@@ -57,6 +61,7 @@ const f4 = () => {
     kolejka = 1
   }
   btns[3].disabled = true
+  ruchy++
 }
 const f5 = () => {
   if (kolejka == 1) {
@@ -67,6 +72,7 @@ const f5 = () => {
     kolejka = 1
   }
   btns[4].disabled = true
+  ruchy++
 }
 const f6 = () => {
   if (kolejka == 1) {
@@ -77,6 +83,7 @@ const f6 = () => {
     kolejka = 1
   }
   btns[5].disabled = true
+  ruchy++
 }
 const f7 = () => {
   if (kolejka == 1) {
@@ -97,6 +104,7 @@ const f8 = () => {
     kolejka = 1
   }
   btns[7].disabled = true
+  ruchy++
 }
 const f9 = () => {
   if (kolejka == 1) {
@@ -107,6 +115,7 @@ const f9 = () => {
     kolejka = 1
   }
   btns[8].disabled = true
+  ruchy++
 }
 
 const reset = () => {
@@ -128,8 +137,62 @@ const winO = () => {
   resetPol()
   reset()
 }
-const wygranaO = () => {
+
+const winX = () => {
+  alert('X wygrały 🥳')
+  resetPol()
+  reset()
+}
+const wygrana = () => {
   if (
+    xroH[0].innerText == 'X' &&
+    xroH[1].innerText == 'X' &&
+    xroH[2].innerText == 'X'
+  ) {
+    winX()
+  } else if (
+    xroH[3].innerText == 'X' &&
+    xroH[4].innerText == 'X' &&
+    xroH[5].innerText == 'X'
+  ) {
+    winX()
+  } else if (
+    xroH[6].innerText == 'X' &&
+    xroH[7].innerText == 'X' &&
+    xroH[8].innerText == 'X'
+  ) {
+    winX()
+  } else if (
+    xroH[0].innerText == 'X' &&
+    xroH[3].innerText == 'X' &&
+    xroH[6].innerText == 'X'
+  ) {
+    winX()
+  } else if (
+    xroH[1].innerText == 'X' &&
+    xroH[4].innerText == 'X' &&
+    xroH[7].innerText == 'X'
+  ) {
+    winX()
+  } else if (
+    xroH[2].innerText == 'X' &&
+    xroH[5].innerText == 'X' &&
+    xroH[8].innerText == 'X'
+  ) {
+    winX()
+  } else if (
+    xroH[0].innerText == 'X' &&
+    xroH[4].innerText == 'X' &&
+    xroH[8].innerText == 'X'
+  ) {
+    winX()
+  } else if (
+    xroH[2].innerText == 'X' &&
+    xroH[4].innerText == 'X' &&
+    xroH[6].innerText == 'X'
+  ) {
+    winX()
+  } else if (
     xroH[0].innerText == 'O' &&
     xroH[1].innerText == 'O' &&
     xroH[2].innerText == 'O'
@@ -179,148 +242,16 @@ const wygranaO = () => {
     winO()
   }
 }
-
-const winX = () => {
-  alert('X wygrały 🥳')
-  resetPol()
-  reset()
-}
-const wygranaX = () => {
-  if (
-    xroH[0].innerText == 'X' &&
-    xroH[1].innerText == 'X' &&
-    xroH[2].innerText == 'X'
-  ) {
-    winX()
-  } else if (
-    xroH[3].innerText == 'X' &&
-    xroH[4].innerText == 'X' &&
-    xroH[5].innerText == 'X'
-  ) {
-    winX()
-  } else if (
-    xroH[6].innerText == 'X' &&
-    xroH[7].innerText == 'X' &&
-    xroH[8].innerText == 'X'
-  ) {
-    winX()
-  } else if (
-    xroH[0].innerText == 'X' &&
-    xroH[3].innerText == 'X' &&
-    xroH[6].innerText == 'X'
-  ) {
-    winX()
-  } else if (
-    xroH[1].innerText == 'X' &&
-    xroH[4].innerText == 'X' &&
-    xroH[7].innerText == 'X'
-  ) {
-    winX()
-  } else if (
-    xroH[2].innerText == 'X' &&
-    xroH[5].innerText == 'X' &&
-    xroH[8].innerText == 'X'
-  ) {
-    winX()
-  } else if (
-    xroH[0].innerText == 'X' &&
-    xroH[4].innerText == 'X' &&
-    xroH[8].innerText == 'X'
-  ) {
-    winX()
-  } else if (
-    xroH[2].innerText == 'X' &&
-    xroH[4].innerText == 'X' &&
-    xroH[6].innerText == 'X'
-  ) {
-    winX()
+const remis = () => {
+  if (ruchy == 8) {
+    alert('remis')
+    resetPol()
+    reset()
   }
 }
 
-// const remiss = () => {
-//   alert('remis')
-//   resetPol()
-// }
-// const remis = () => {
-//   if (
-//     btns[0].innerText != '' &&
-//     btns[1].innerText != '' &&
-//     btns[2].innerText != ''
-//   ) {
-//     remiss()
-//   } else if (
-//     btns[3].innerText != '' &&
-//     btns[4].innerText != '' &&
-//     btns[5].innerText != ''
-//   ) {
-//     remiss()
-//   } else if (
-//     btns[6].innerText != '' &&
-//     btns[7].innerText != '' &&
-//     btns[8].innerText != ''
-//   ) {
-//     remiss()
-//   } else if (
-//     btns[0].innerText != '' &&
-//     btns[3].innerText != '' &&
-//     btns[6].innerText != ''
-//   ) {
-//     remiss()
-//   } else if (
-//     btns[1].innerText != '' &&
-//     btns[4].innerText != '' &&
-//     btns[7].innerText != ''
-//   ) {
-//     remiss()
-//   } else if (
-//     btns[2].innerText != '' &&
-//     btns[5].innerText != '' &&
-//     btns[8].innerText != ''
-//   ) {
-//     remiss()
-//   } else if (
-//     btns[0].innerText != '' &&
-//     btns[4].innerText != '' &&
-//     btns[8].innerText != ''
-//   ) {
-//     remiss()
-//   } else if (
-//     btns[2].innerText != '' &&
-//     btns[4].innerText != '' &&
-//     btns[6].innerText != ''
-//   ) {
-//     remiss()
-//   }
-// }
-//   else if (
-//     btns[0].innerText == 'O' &&
-//     btns[3].innerText == 'O' &&
-//     btns[6].innerText == 'O'
-//   ) {
-//     winO()
-//   } else if (
-//     btns[0].innerText == 'O' &&
-//     btns[4].innerText == 'O' &&
-//     btns[8].innerText == 'O'
-//   ) {
-//     winO()
-//   } else if (
-//     btns[6].innerText == 'O' &&
-//     btns[2].innerText == 'O' &&
-//     btns[4].innerText == 'O'
-//   ) {
-//     winO()
-//   } else if (
-//     btns[2].innerText == 'O' &&
-//     btns[5].innerText == 'O' &&
-//     btns[8].innerText == 'O'
-//   ) {
-//     winO()
-//   }
-
-setInterval(wygranaO, 100)
-setInterval(wygranaX, 100)
-// setInterval(remiss, 100)
+setInterval(wygrana, 100)
+setInterval(remis, 100)
 
 btns[0].addEventListener('click', f1)
 btns[1].addEventListener('click', f2)
