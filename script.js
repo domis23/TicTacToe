@@ -244,9 +244,10 @@ const wygrana = () => {
 }
 const remis = () => {
   if (ruchy == 8) {
-    alert('remis')
+    alert('Remis 😱')
     resetPol()
     reset()
+    ruchy = 0
   }
 }
 
